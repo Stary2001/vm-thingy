@@ -9,8 +9,8 @@ int main(int argc, char **argv)
 	c.mem = malloc(128 * 1024 * 1024);
 
 	c.mem[0] = 0x01;
-	c.mem[1] = 0x0d;
-	c.mem[2] = 0x0d;
+	c.mem[1] = 0x0e;
+	c.mem[2] = 0x0e;
 	c.mem[3] = 0x00;
 	
 	c.mem[4] = 0x15;

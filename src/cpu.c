@@ -7,7 +7,7 @@
 typedef void(*cpu_ptr)(cpu_t *c, uint32_t arg1, uint32_t arg2, uint32_t flags);
 
 
-#define decode(cp, a, imm) a != 0xff ? (a > 0xb ? (imm=a - 0xb), &imm : &cp->regs[a]) : ((cp->pc+=4, imm = cp->mem[cp->pc]), &imm)
+#define decode(cp, a, imm) a != 0xff ? (a > 0xb ? (imm=a - 0xc), &imm : &cp->regs[a]) : ((cp->pc+=4, imm = cp->mem[cp->pc]), &imm)
 
 void op_add(cpu_t *c, uint32_t arg1, uint32_t arg2, uint32_t flags)
 {
